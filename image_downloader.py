@@ -25,12 +25,12 @@ with open(sys.argv[1], 'r') as url_file:
     for line in url_file:
         image_url = line
         try:
-		    # Use this line to save images in the given local path
+            # Use this line to save images in the given local path
             #urllib2.urlretrieve(image_url, local_path + "image_" + str(success) + ".jpg")
 			
-			# This line will save images in the current directory. Comment it out if the previous line is used
-			urllib.urlretrieve(image_url, "image_" + str(success) + ".jpg")
-			success += 1
+            # This line will save images in the current directory. Comment it out if the previous line is used
+            urllib.urlretrieve(image_url, "image_" + str(success) + ".jpg")
+            success += 1
 
         except IOError as err:
             print(err)   # something wrong with the given local path or URL
